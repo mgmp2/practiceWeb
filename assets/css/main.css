@@ -9,7 +9,7 @@ img {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0
+    margin: 0;
 }
 
 
@@ -17,23 +17,30 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     letter-spacing: 2px;
 }
+.section-titulo {
+    text-align: center;
+    font-size: 42px;
+    color: #d77979;
+}
 /*Estiolos del header */
 .header {
     height: 60px;
 }
 .header .contenedor {
-    display: flex ; /*para que se ponga un lado del otro*/
+    display: flex; /*para que se ponga un lado del otro*/
     justify-content: space-between;
     
 }
 .logo, .icon-menu{
-    margin: 5px;
+    margin: 7px;
     color: #fff;
+    cursor: pointer;
+    text-decoration: none;
 }
 .icon-menu{
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 49px;
+    height: 35px;
     font-size: 30px;
     background: #d77979;
     color: #fff;
@@ -41,9 +48,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 41px;
     border-radius: 7px;
     margin-left: auto;
-    cursor: pointer;
 }
-/*-------------------- Estilos del menu --------------------*/
+.contenedor {
+    margin: auto;
+    width: 97%;
+}
+/*---------------- Estilos del menu ----------------*/
 .nav {
     position: absolute; /*me permite ir hacia atras de mi título*/
     top: 60px;
@@ -63,25 +73,23 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     background: #d77979;
 }
-.menu-link:hover {
+.menu-link:hover, .select {
     background: #fff;
     color: #d77979;
 }
 .mostrar {
     left: 0;
 }
-.select {
-    background: #fff;
-    color: #d77979;
-}
+
 
 /*------------------estilos de banner------*/
-.banner {
-    margin-top:-60px;
-    position: absolute;
-    z-index: -100;
+#banner {
+    margin-top: -60px;
+    z-index: -1000;
+    margin-bottom: 20px;
+    position: relative;
 }
-.banner .contenedor {
+#banner .contenedor {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -92,4 +100,180 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner-txt {
     display: none;
+}
+
+/* -------estilos de familia-------- */
+.familia-columna{
+    background: #d77979;
+    color: #fff;
+    padding: 18px;
+    margin-bottom: 30px;
+}
+
+/* -------estilos de fotos-------- */
+.fotos-columna {
+    position: relative;
+    margin-bottom: 35px;
+}
+.fotos-descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+.fotos-titulo {
+    font-size: 28px;
+    margin: 5px 0;
+    margin-top: 210px;
+    
+}
+.fotos-img {
+    width: 100%;
+}
+/*-------------Estilos de footer-------------*/
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 35px;
+    padding: 7px;
+    background: #fff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    line-height: 42px;
+    
+}
+
+/*---------------------------------------------------------PARTE RESPONSIVE ---------------------------------------------------------*/
+
+@media(min-width:480px) {
+    .logo {
+        font-size: 42px;
+    }
+    .banner-titulo {
+        font-size: 35px;
+        margin: 7px 0;
+    }
+    .banner-txt {
+        display: block;
+        font-size: 14px;
+        margin: 7px 0;
+    }
+
+    .familia-titulo {
+        font-size: 35px;
+        margin: 5px 0;
+    }
+    .section-titulo {
+        width: 100%;
+    }
+    #fotos {
+
+        display: flex; /*permite que este al lado*/
+        justify-content: space-between;
+        margin-top: -113px;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .fotos-columna {
+        width: 49%
+    }
+    .fotos-titulo {
+        font-size: 28px;
+        margin: 5px 0;
+        margin-top: 100%;
+}
+    .footer .social [class^="icon-"] {
+        margin: 0 10px;
+    }
+    
+}
+
+@media(min-width: 768px) {
+    
+    .banner-titulo {
+        font-size: 45px;
+    }
+    #familia {
+        margin-top: -140px;
+    }
+    #familia {
+        display: flex; /*permite que este al lado*/
+        justify-content: space-between;
+        margin-top: -113px;
+    }
+    .familia-columna {
+        width: 19%;
+    }
+    .familia-titulo {
+        font-size: 40px;
+    }
+    .fotos-titulo {
+        font-size: 35px;
+    }
+    
+}
+
+@media(min-width: 1024px){
+    .contenedor {
+        width: 1200px;
+    }
+    
+    .nav{
+        position: static;
+        width: auto
+    }
+    .icon-menu {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+    .menu-link {
+        background: none;
+    }
+    .select {
+        color: #fff;
+        background: #d77979;
+    }
+    .banner-titulo, .logo {
+        font-size: 60px;
+    }
+    
+     #familia {
+        margin-top: -280px;
+    }
+    
+    .familia-titulo {
+        font-size: 30px;
+        margin: 14px 0;
+        text-align: center
+    }
+    .section-titulo {
+        font-size: 55px;
+    }
+    .fotos-titulo {
+        font-size: 50px;
+        
+    }
+    .fotos-descripcion {
+        padding: 50% 20px;
+        align-items: center;
+        font-size: 28px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
 }
