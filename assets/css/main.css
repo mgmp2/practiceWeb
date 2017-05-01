@@ -1,6 +1,95 @@
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
+
+*{
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0
+}
 
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 2px;
+}
+/*Estiolos del header */
+.header {
+    height: 60px;
+}
+.header .contenedor {
+    display: flex ; /*para que se ponga un lado del otro*/
+    justify-content: space-between;
+    
+}
+.logo, .icon-menu{
+    margin: 5px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #d77979;
+    color: #fff;
+    text-align: center;
+    line-height: 41px;
+    border-radius: 7px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------- Estilos del menu --------------------*/
+.nav {
+    position: absolute; /*me permite ir hacia atras de mi título*/
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-link {
+    display: block;
+    padding: 21px;
+    color: #fff;
+    text-decoration: none;
+    background: #d77979;
+}
+.menu-link:hover {
+    background: #fff;
+    color: #d77979;
+}
+.mostrar {
+    left: 0;
+}
+.select {
+    background: #fff;
+    color: #d77979;
+}
+
+/*------------------estilos de banner------*/
+.banner {
+    margin-top:-60px;
+    position: absolute;
+    z-index: -100;
+}
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner-txt {
+    display: none;
 }
